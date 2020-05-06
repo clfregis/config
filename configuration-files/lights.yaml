@@ -1,0 +1,9 @@
+- platform: mqtt
+  name: "Lampada Quarto"
+  command_topic: "cmnd/lampada/POWER"
+  state_topic: "stat/lampada/POWER"
+  availability_topic: "tele/lampada/LWT"
+  payload_on: "ON"
+  payload_off: "OFF"
+  payload_available: "Online"
+  payload_not_available: "Offline"

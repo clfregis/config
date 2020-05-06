@@ -1,0 +1,7 @@
+
+# Ar Condicionado Suite
+- platform: smartir
+  name: Ar Suite
+  unique_id: suite
+  device_code: 1525
+  controller_data: 10.0.0.107

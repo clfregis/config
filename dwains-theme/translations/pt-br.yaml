@@ -1,0 +1,166 @@
+# Translation by clfregis
+
+pt-br:
+  greetings:
+    good_morning: 'Bom Dia'
+    good_afternoon: 'Boa Tarde'
+    good_evening: 'Boa Noite'
+  
+  alarm:
+    armed_away: 'Sistema de alarme ativado (Ausente).'
+    armed_home: 'Sistema de alarme ativado (Em Casa).'
+    disarmed: 'Sistema de alarme desativado.'
+
+  history:
+    sec_ago: 'seg atrás'
+    min_ago: 'min atrás'
+    h_ago: 'h atrás'
+    d_ago: 'd atrás'
+    m_ago: 'm atrás'
+    y_ago: 'a atrás'
+
+  house_information:
+    title: 'Informações da casa'
+    favorites: 'Favoritos'
+    house_calendar: 'Agenda da casa'
+    activity: 'Atividade (Portas, janelas, movimento)'
+
+  motion:
+    title: 'Movimento'
+    title_plural: 'Movimentos'
+    motion_on: 'Detectado'
+
+  light:
+    title: 'Luz'
+    title_plural: 'Luzes'
+    light_on: 'luz acesa'
+    lights_on: 'luzes acesas'
+    light_off: 'luz apagada'
+    lights_off: 'luzes apagadas'
+    all_lights_on: 'Todas luzes acesas'
+    all_lights_off: 'Todas luzes apagadas'
+    on_text: 'Acesa'
+    off_text: 'Apagada'
+
+  door:
+    title: 'Porta'
+    title_plural: 'Portas'
+    door_open: 'porta aberta'
+    doors_open: 'portas abertas'
+    all_doors_open: 'Todas portas abertas'
+    all_doors_closed: 'Todas portas fechadas'
+    open: 'Aberta'
+    closed: 'Fechada'
+
+  window:
+    title: 'Janela'
+    title_plural: 'Janelas'
+    window_open: 'janela aberta'
+    windows_open: 'janelas abertas'
+    all_windows_open: 'Todas janelas abertas'
+    all_windows_closed: 'Todas janelas fechadas'
+    open: 'Aberta'
+    closed: 'Fechada'
+
+  climate:
+    title: 'Temperatura'
+    title_plural: 'Temperaturas'
+    inside: 'dentro'
+    outside: 'fora'
+    idle: 'Em espera'
+    heating: 'Aquecendo para'
+    off_text: 'Desligado'
+    auto: 'Auto'
+    heat: 'Quente'
+    cool: 'Frio'
+    heat_cool: 'Quente/Frio'
+    dry: 'Seco'
+    fan_only: 'Apenas ventilador'
+    this_room: 'Esse ambiente'
+    temperature: 'Temperatura'
+    humidity: 'Umidade'
+
+
+  cover:
+    title: 'Cortina'
+    title_plural: 'Cortinas'
+    cover_open: 'Aberta'
+    cover_closed: 'Fechada'
+
+  device:
+    title: 'Dispositivo'
+    title_plural: 'Dispositivos'
+    device_on: 'dispositivo ligado'
+    devices_on: 'dispositivos ligados'
+    on_text: 'Ligado'
+    off_text: 'Desligado'
+    device_off: 'dispositivo desligado'
+    devices_off: 'dispositivos desligados'
+    all_devices_on: 'Todos dispositivos ligados'
+    all_devices_off: 'Todos dispositivos desligados'
+
+  media_player:
+    title: 'Reprodutor de mídia'
+    title_plural: 'Reprodutores de mída'
+    media_player_on: 'reprodutor de mídia ligado'
+    media_players_on: 'reprodutores de mídia ligados'
+    media_player_off: 'reprodutor de mídia desligado'
+    media_players_off: 'reprodutores de mídia desligados'
+    all_media_players_on: 'Todos reprodutores de mídia ligados'
+    all_media_players_off: 'Todos reprodutores de mídia desligados'
+    on_text: 'Ligado'
+    off_text: 'Desligado'
+
+  vacuum:
+    title: 'Aspirador'
+    title_plural: 'Aspiradores'
+
+  plant:
+    title: 'Planta'
+    title_plural: 'Plantas'
+    plant_problem: 'problema na planta'
+    plants_problem: 'problemas nas plantas'
+
+  home:
+    title: 'Página inicial'
+
+  rooms:
+    title: 'Ambientes'
+
+  all_lights:
+    title: 'Todas luzes'
+
+  scenes:
+    title: 'Cenas'
+    not_defined: 'Sem cenas definidas'
+
+  cameras:
+    title: 'Câmeras'
+    not_defined: 'Sem câmeras definidas'
+
+  more_page:
+    title: 'Mais'
+    house_info: 'Informações da casa'
+    house_data: 
+      title: 'Dados da casa'
+      all_sensors: 'Todos sensores'
+      all_batteries: 'Todas baterias'
+      config: 'Configurações'
+      developer_tools: 'Ferramentas do desenvolvedor'
+    settings:
+      title: 'Configurações de tema'
+      reload_configuration: 'Recarregar configuração de tema'
+      theme_docs: 'Documentação do tema'
+      support_paypal: 'Apoiar/Doar com PayPal'
+      buy_coffee: 'Buy me a coffee'
+      by: 'Por'
+      version: 'Versão'
+      update_available: 'Atualização disponível do Tema Dwains!'
+    more_page_addons: 'Mais addons'
+
+  more_entities:
+    title: 'Mais entidades'
+
+  lock:
+    title: 'Tranca'
+    title_plural: 'Trancas'

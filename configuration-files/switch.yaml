@@ -1,0 +1,6 @@
+  - platform: broadlink
+    friendly_name: 'Broad Suite'
+    host: !secret ip_broadmini_suite
+    mac: !secret mac_broadmini_suite
+    timeout: 300
+    type: rm_mini

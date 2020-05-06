@@ -1,0 +1,49 @@
+#Copy from here#
+#Start of dwains-theme necessary code#
+homeassistant:
+  # If you want to customize entries with friendly_name or custom icon.
+  # Read more here: https://www.home-assistant.io/docs/configuration/customizing-devices/
+  # Uncomment line below and create file customize.yaml or edit it
+  # customize: !include customize.yaml
+
+  # Below entry links to the packages folder required for Dwains Theme
+  packages: !include_dir_named packages/ # Comment this whole line if you want to disable Dwains Theme
+
+  # If you had any important strings before in homeassistant: place them back here below
+  # 
+#End of dwains-theme necessary code#
+#Copy till here#
+
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include configuration-files/groups.yaml
+automation: !include configuration-files/automations.yaml
+script: !include configuration-files/scripts.yaml
+scene: !include configuration-files/scenes.yaml
+light: !include configuration-files/lights.yaml
+climate: !include configuration-files/climate.yaml
+switch: !include configuration-files/switch.yaml
+
+sonoff:
+  username: !secret sonoff_user
+  password: !secret sonoff_senha
+  default_class: light  # changes the default class of all devices from switch to light
+
+# Custom componente para Broadlink
+# https://github.com/smartHomeHub/SmartIR
+smartir:
+  update_branch: rc
+  
+# https://www.home-assistant.io/integrations/recorder/ 
+recorder:
+  purge_keep_days: 5
