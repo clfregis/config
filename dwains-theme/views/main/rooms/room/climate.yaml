@@ -20,13 +20,9 @@
         - type: custom:mod-card
           card:
             type: custom:layout-card
-            layout: grid
-            gridrows: auto
-            gridcols: 75% 25%
+            layout: auto
             cards:    
               - type: 'custom:simple-thermostat'
-                gridrow: 1 / 1
-                gridcol: 1 / 2
                 entity: {{ room["climate"] }}
                 step_size: 1
                 decimals: 0
@@ -38,9 +34,9 @@
                     heat_cool: false
                     dry: false
                     heat: false
-                    cool: false
-                    fan_only: false
-                    'off': false
+                    cool: true
+                    fan_only: true
+                    'off': true
                     auto: false
                   fan:
                     low:
@@ -65,92 +61,8 @@
                   #info {
                     display: none;
                   } 
-              - type: vertical-stack
-                gridrow: 1 / 1
-                gridcol: 2 / 2
-                cards:
-                  {% set climate_hvac_modes = [
-                      [
-                        "off",
-                        "off_text",
-                        "fas:power-off",
-						            "climate_off",
-                      ],
-                      [
-                        "heat",
-                        "heat",
-                        "fas:fire-alt",
-						            "climate_heat",
-                      ],
-                      [
-                        "auto",
-                        "auto",
-                        "far:clock",
-						            "climate_auto",
-                      ],
-                      [
-                        "cool",
-                        "cool",
-                        "hass:snowflake",
-						            "climate_cool",
-                      ],
-                      [
-                        "heat_cool",
-                        "heat_cool",
-                        "far:clock",
-						            "climate_heat_cool",
-                      ],
-                      [
-                        "dry",
-                        "dry",
-                        "hass:water-percent",
-						            "climate_dry",
-                      ],
-                      [
-                        "fan_only",
-                        "fan_only",
-                        "hass:fan",
-						            "climate_fan_only",
-                      ],
-                    ] 
-                  %}
-                  {% for button in climate_hvac_modes %}
-                  - type: custom:button-card
-                    template: room_climate
-                    entity: {{ room["climate"] }}
-                    icon: '{{ _d_t_icons[button[3]]|default(button[2]) }}'
-                    name: '{{ _d_t_trans.climate[button[1]] }}'
-                    tap_action: 
-                      action: call-service
-                      service: climate.set_hvac_mode
-                      service_data:
-                        entity_id: {{ room["climate"] }}
-                        hvac_mode: '{{ button[0] }}'
-                    styles:
-                      card:
-                        - display: >
-                            [[[
-                              if(entity && entity.attributes.hvac_modes.includes('{{ button[0] }}')){
-                                return 'block';
-                              } else {
-                                return 'none';
-                              }
-                            ]]]
-                    state:
-                      - value: '{{ button[0] }}'
-                        styles:
-                          img_cell:
-                            - background: var(--dwains-theme-accent)
-                            - border: '1px solid var(--dwains-theme-accent)'
-                          icon:
-                            - color: '#ffffff'
-                          name: 
-                            - color: var(--dwains-theme-names)
-                  {% endfor %}
         {% elif room["temperature"] %}
         - type: markdown
-          gridrow: 1 / 1
-          gridcol: 1 / 2
           style: |
             ha-card {
               box-shadow: none;
