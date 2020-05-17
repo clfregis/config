@@ -1,1 +1,53 @@
-[]
+###########################################################################################################################################################
+# Inicializacao
+###########################################################################################################################################################
+# Avisa que o HA foi reiniciado/iniciado no meu celular e no Google Home
+- alias: Home Assistant Inicializado
+  initial_state: true
+  description: 'Inicializar processos, como: Atualizacao do estado dos dispositivos MQTT'
+
+  # Dispara sempre que o HA for iniciado
+  trigger:
+    platform: homeassistant
+    event: start
+  action: 
+
+    # Acao para atualizar estados dos dispositivos mqtt
+    - service: mqtt.publish
+      data:
+        topic: cmnd/tasmotas/state
+        payload: ''
+    - service: mqtt.publish
+      data:
+        topic: cmnd/tasmotas/POWER
+        payload: ''
+
+    # ação para notificar no GH
+    #- service: tts.watson_tts_say
+    - service: tts.google_translate_say
+      data_template:
+        entity_id: media_player.sala
+        message: "Automação iniciada às {{ states('sensor.time') }}"
+
+###########################################################################################################################################################
+# Acender lâmpadas externas
+###########################################################################################################################################################
+- alias: Acender Lâmpadas Externas
+  description: 'Ligar a Lâmpada da área todos os dias as 18 horas e avisar no celular'
+  
+  trigger:
+    platform: time
+    at: '18:00:00'
+
+  action:
+    # Ligar Luzes
+    - service: light.turn_on
+      data:
+        entity_id: light.area
+
+
+    # Enviar mensagem
+    - service: notify.notify
+      data:
+        message: Boa noite! As luzes da área foram acesas!
+        title: Luzes
