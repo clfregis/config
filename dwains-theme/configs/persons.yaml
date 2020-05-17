@@ -2,7 +2,7 @@
 
 persons: 
   - name: Claudio
-    track: person.claudio
+    #track: person.claudio
     picture_path: 'images/persons/claudio.jpg'
     more_entities:
       columns: 1 #optional
@@ -20,7 +20,7 @@ persons:
         - entity: sensor.claudios_iphone_steps
 
   - name: Lucas
-    track: person.lucas
+    #track: person.lucas
     picture_path: 'images/persons/lucas.png'
     page_entities:
       columns: 2 #optional
@@ -29,13 +29,13 @@ persons:
         - entity: sensor.lg_k220_wifi_connection
  
   - name: Viviane
-    track: person.viviane
+    #track: person.viviane
     picture_path: 'images/persons/viviane.png'
 
   - name: Cloves
-    track: person.cloves
+    #track: person.cloves
     picture_path: 'images/persons/cloves.png'
     
   - name: Ana G.
-    track: person.anag
+    #track: person.anag
     picture_path: 'images/persons/ana.png'
